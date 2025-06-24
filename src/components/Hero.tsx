@@ -2,8 +2,22 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Play } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate('/contact');
+  };
+
+  const handleWatchDemo = () => {
+    const servicesSection = document.getElementById('services');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white overflow-hidden">
       {/* Background Pattern */}
@@ -28,11 +42,20 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white group">
+              <Button 
+                size="lg" 
+                className="bg-blue-600 hover:bg-blue-700 text-white group"
+                onClick={handleGetStarted}
+              >
                 Get Started Today
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 group">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-white/30 text-white hover:bg-white/10 group"
+                onClick={handleWatchDemo}
+              >
                 <Play className="mr-2 w-4 h-4" />
                 Watch Demo
               </Button>
