@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Cloud, Shield, Database, Zap, Code, Users, CheckCircle, ArrowRight } from 'lucide-react';
+import { Cloud, Shield, Database, Zap, Code, Users, CheckCircle, ArrowRight, BookOpen, Github, ExternalLink } from 'lucide-react';
 
 const Services = () => {
   const services = [
@@ -78,9 +78,125 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-20">
+      {/* Learning Journey Section */}
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              My Learning Journey
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Continuously learning and staying updated with the latest technologies and best practices 
+              in AI, DevOps, and cloud computing.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <Card className="p-8 hover:shadow-lg transition-all duration-300">
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-teal-500 rounded-lg flex items-center justify-center">
+                    <BookOpen className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-gray-900">
+                    Panaversity Education
+                  </h3>
+                </div>
+
+                <p className="text-gray-600 leading-relaxed">
+                  Advancing my skills through Panaversity's comprehensive programs in AI, 
+                  cloud computing, and modern development practices. Staying at the forefront 
+                  of technological innovation.
+                </p>
+
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-gray-900">Learning Focus Areas:</h4>
+                  <ul className="space-y-2">
+                    {[
+                      "AI Engineering & Machine Learning",
+                      "Cloud-Native Technologies",
+                      "Modern DevOps Practices",
+                      "Full-Stack Development"
+                    ].map((area, index) => (
+                      <li key={index} className="flex items-center space-x-3">
+                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                        <span className="text-gray-600">{area}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <Button 
+                  className="bg-blue-600 hover:bg-blue-700 text-white group w-full"
+                  onClick={() => window.open('https://github.com/panaversity', '_blank')}
+                >
+                  <Github className="mr-2 w-4 h-4" />
+                  Explore Panaversity Repository
+                  <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </div>
+            </Card>
+
+            <Card className="p-8 hover:shadow-lg transition-all duration-300">
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-600 to-green-500 rounded-lg flex items-center justify-center">
+                    <Cloud className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-gray-900">
+                    Panacloud Platform
+                  </h3>
+                </div>
+
+                <p className="text-gray-600 leading-relaxed">
+                  Leveraging Panacloud's innovative platform for cloud-native development 
+                  and deployment. Building scalable applications with cutting-edge technologies 
+                  and industry best practices.
+                </p>
+
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-gray-900">Platform Benefits:</h4>
+                  <ul className="space-y-2">
+                    {[
+                      "Serverless Architecture",
+                      "JAMstack Development",
+                      "Cloud-First Approach",
+                      "Modern Development Tools"
+                    ].map((benefit, index) => (
+                      <li key={index} className="flex items-center space-x-3">
+                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                        <span className="text-gray-600">{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <Button 
+                  className="bg-teal-600 hover:bg-teal-700 text-white group w-full"
+                  onClick={() => window.open('https://www.panacloud.com/', '_blank')}
+                >
+                  <ExternalLink className="mr-2 w-4 h-4" />
+                  Visit Panacloud Platform
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Professional Services
+            </h2>
+            <p className="text-xl text-gray-600">
+              Backed by continuous learning and industry expertise
+            </p>
+          </div>
+
           <div className="grid lg:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <Card key={index} className="p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
@@ -122,7 +238,7 @@ const Services = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
