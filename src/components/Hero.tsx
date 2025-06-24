@@ -22,7 +22,7 @@ const Hero = () => {
     <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%221%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]" />
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%221%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]" />
       </div>
 
       <div className="container mx-auto px-6 py-20 lg:py-32">
@@ -32,12 +32,13 @@ const Hero = () => {
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight animate-fade-in">
                 Empowering Your Business with 
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">
-                  {" "}Cutting-Edge DevOps
+                  {" "}AI-Driven DevOps
                 </span>
               </h1>
               <p className="text-xl text-gray-300 leading-relaxed animate-fade-in">
-                Transform your development lifecycle with our expert DevOps solutions. 
-                We streamline operations, enhance security, and accelerate delivery.
+                Hi! I'm Ayesha Bashir, a certified AI Engineer and DevOps specialist. 
+                I transform development lifecycles with expert DevOps solutions, AI integration, 
+                and cutting-edge automation technologies.
               </p>
             </div>
 
@@ -57,18 +58,18 @@ const Hero = () => {
                 onClick={handleWatchDemo}
               >
                 <Play className="mr-2 w-4 h-4" />
-                Watch Demo
+                Explore Services
               </Button>
             </div>
 
             <div className="flex items-center space-x-8 animate-fade-in">
               <div className="text-center">
-                <div className="text-2xl font-bold text-blue-400">500+</div>
+                <div className="text-2xl font-bold text-blue-400">100+</div>
                 <div className="text-sm text-gray-400">Projects Delivered</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-teal-400">98%</div>
-                <div className="text-sm text-gray-400">Client Satisfaction</div>
+                <div className="text-2xl font-bold text-teal-400">AI</div>
+                <div className="text-sm text-gray-400">Certified Engineer</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-blue-400">24/7</div>
@@ -81,7 +82,7 @@ const Hero = () => {
             <div className="relative z-10">
               <img 
                 src="/lovable-uploads/ed77ed91-52fd-4555-a94e-e8c1ba77567c.png" 
-                alt="DevOps Innovation" 
+                alt="AI-Driven DevOps Innovation by Ayesha Bashir" 
                 className="w-full max-w-lg mx-auto animate-scale-in"
               />
             </div>

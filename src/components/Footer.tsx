@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Cpu, Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
+import { Cpu, Mail, Phone, MapPin, Linkedin, Github, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -18,17 +18,32 @@ const Footer = () => {
             </Link>
             <p className="text-gray-400 leading-relaxed">
               Empowering businesses with cutting-edge DevOps solutions, 
-              cloud infrastructure, and automation technologies.
+              cloud infrastructure, and automation technologies by Ayesha Bashir.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a 
+                href="https://www.linkedin.com/in/ayesha-bashir-60b83b2b1/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a 
+                href="https://github.com/Ayesha0300" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
                 <Github className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://v0-modern-portfolio-website-delta-umber.vercel.app/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <ExternalLink className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -83,15 +98,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-gray-400" />
-                <span className="text-gray-400">hello@devops.com</span>
+                <span className="text-gray-400">ayesha.bashir@devops.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-gray-400" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
+                <span className="text-gray-400">+92 (300) 123-4567</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-gray-400" />
-                <span className="text-gray-400">San Francisco, CA</span>
+                <span className="text-gray-400">Karachi, Pakistan</span>
               </div>
             </div>
           </div>
@@ -100,7 +115,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm">
-              © 2024 DevOps. All rights reserved.
+              © 2024 DevOps by Ayesha Bashir. All rights reserved.
             </div>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">

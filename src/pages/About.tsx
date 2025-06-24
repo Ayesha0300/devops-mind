@@ -4,16 +4,20 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Award, Users, Target, Lightbulb, CheckCircle } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Award, Users, Target, Lightbulb, CheckCircle, Linkedin, Github, ExternalLink } from 'lucide-react';
 
 const About = () => {
   const teamMembers = [
     {
       name: "Ayesha Bashir",
-      role: "Lead DevOps Engineer",
-      bio: "Certified Agentic & Robotic AI Engineer with expertise in cloud-native systems and automation.",
+      role: "Lead DevOps Engineer & AI Specialist",
+      bio: "Certified Agentic & Robotic AI Engineer with expertise in cloud-native systems, automation, and modern web development. Passionate about bridging the gap between development and operations.",
       image: "/lovable-uploads/d3029605-a658-40ef-a969-d79820e4c96a.png",
-      skills: ["Python", "Kubernetes", "AWS", "Terraform"]
+      skills: ["Python", "Kubernetes", "AWS", "Terraform", "React", "TypeScript", "AI/ML"],
+      linkedin: "https://www.linkedin.com/in/ayesha-bashir-60b83b2b1/",
+      github: "https://github.com/Ayesha0300",
+      portfolio: "https://v0-modern-portfolio-website-delta-umber.vercel.app/"
     },
     {
       name: "Sarah Johnson",
@@ -32,11 +36,11 @@ const About = () => {
   ];
 
   const milestones = [
-    { year: "2014", event: "Company Founded", description: "Started as a small DevOps consultancy" },
-    { year: "2017", event: "100 Projects Milestone", description: "Completed our 100th successful project" },
-    { year: "2020", event: "Cloud Excellence Award", description: "Recognized for outstanding cloud migrations" },
-    { year: "2022", event: "AI Integration", description: "Pioneered AI-powered DevOps automation" },
-    { year: "2024", event: "500+ Projects", description: "Celebrating over 500 successful deployments" }
+    { year: "2020", event: "Started Journey", description: "Began specializing in DevOps and cloud technologies" },
+    { year: "2021", event: "AI Certification", description: "Became certified in Agentic & Robotic AI Engineering" },
+    { year: "2022", event: "Cloud Excellence", description: "Achieved expertise in AWS, Azure, and multi-cloud deployments" },
+    { year: "2023", event: "DevOps Mastery", description: "Specialized in Kubernetes, Terraform, and automation" },
+    { year: "2024", event: "Full-Stack Innovation", description: "Integrated AI with modern web development and DevOps practices" }
   ];
 
   return (
@@ -48,12 +52,48 @@ const About = () => {
         <div className="container mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto space-y-6">
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900">
-              About DevOps
+              About Ayesha Bashir
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              We're a team of passionate DevOps engineers, cloud architects, and automation specialists 
-              dedicated to transforming how organizations build, deploy, and manage their applications.
+              A passionate DevOps engineer, AI specialist, and full-stack developer dedicated to 
+              transforming how organizations build, deploy, and manage their applications through 
+              cutting-edge automation and intelligent solutions.
             </p>
+            <div className="flex justify-center space-x-4 mt-8">
+              <Button asChild variant="outline">
+                <a 
+                  href="https://www.linkedin.com/in/ayesha-bashir-60b83b2b1/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2"
+                >
+                  <Linkedin className="w-4 h-4" />
+                  <span>LinkedIn</span>
+                </a>
+              </Button>
+              <Button asChild variant="outline">
+                <a 
+                  href="https://github.com/Ayesha0300" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2"
+                >
+                  <Github className="w-4 h-4" />
+                  <span>GitHub</span>
+                </a>
+              </Button>
+              <Button asChild>
+                <a 
+                  href="https://v0-modern-portfolio-website-delta-umber.vercel.app/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  <span>Portfolio</span>
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -64,28 +104,28 @@ const About = () => {
           <div className="grid lg:grid-cols-3 gap-8 mb-16">
             <Card className="p-8 text-center">
               <Target className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-4">Our Mission</h3>
+              <h3 className="text-xl font-semibold mb-4">My Mission</h3>
               <p className="text-gray-600 leading-relaxed">
-                To empower organizations with cutting-edge DevOps practices that accelerate innovation, 
-                improve reliability, and drive business growth.
+                To empower organizations with cutting-edge DevOps practices and AI-driven solutions 
+                that accelerate innovation, improve reliability, and drive business growth.
               </p>
             </Card>
             
             <Card className="p-8 text-center">
               <Lightbulb className="w-12 h-12 text-teal-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-4">Our Vision</h3>
+              <h3 className="text-xl font-semibold mb-4">My Vision</h3>
               <p className="text-gray-600 leading-relaxed">
-                To be the leading DevOps consultancy that bridges the gap between development and operations 
-                through intelligent automation and best practices.
+                To bridge the gap between development, operations, and artificial intelligence 
+                through intelligent automation and innovative solutions.
               </p>
             </Card>
             
             <Card className="p-8 text-center">
               <Award className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-4">Our Values</h3>
+              <h3 className="text-xl font-semibold mb-4">My Values</h3>
               <p className="text-gray-600 leading-relaxed">
-                Excellence, innovation, transparency, and client success drive everything we do. 
-                We believe in building long-term partnerships based on trust and results.
+                Excellence, continuous learning, innovation, and creating impactful solutions 
+                that make a difference in the tech industry.
               </p>
             </Card>
           </div>
@@ -101,7 +141,7 @@ const About = () => {
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our diverse team of experts brings together years of experience in DevOps, 
-              cloud technologies, and enterprise software development.
+              cloud technologies, AI, and enterprise software development.
             </p>
           </div>
 
@@ -116,13 +156,41 @@ const About = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
                 <p className="text-blue-600 font-medium mb-3">{member.role}</p>
                 <p className="text-gray-600 mb-4 leading-relaxed">{member.bio}</p>
-                <div className="flex flex-wrap gap-2 justify-center">
+                <div className="flex flex-wrap gap-2 justify-center mb-4">
                   {member.skills.map((skill, skillIndex) => (
                     <Badge key={skillIndex} variant="secondary">
                       {skill}
                     </Badge>
                   ))}
                 </div>
+                {member.linkedin && (
+                  <div className="flex justify-center space-x-3">
+                    <a 
+                      href={member.linkedin} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-blue-600 transition-colors"
+                    >
+                      <Linkedin className="w-5 h-5" />
+                    </a>
+                    <a 
+                      href={member.github} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-gray-900 transition-colors"
+                    >
+                      <Github className="w-5 h-5" />
+                    </a>
+                    <a 
+                      href={member.portfolio} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-teal-600 transition-colors"
+                    >
+                      <ExternalLink className="w-5 h-5" />
+                    </a>
+                  </div>
+                )}
               </Card>
             ))}
           </div>
@@ -134,10 +202,10 @@ const About = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Our Journey
+              My Journey
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A decade of innovation, growth, and successful partnerships in the DevOps space.
+              A journey of continuous learning, innovation, and growth in the DevOps and AI space.
             </p>
           </div>
 

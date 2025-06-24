@@ -7,6 +7,10 @@ import { Link } from 'react-router-dom';
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleGetStarted = () => {
+    window.open('https://v0-modern-portfolio-website-delta-umber.vercel.app/', '_blank');
+  };
+
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
       <div className="container mx-auto px-6 py-4">
@@ -17,6 +21,7 @@ const Navigation = () => {
               <Cpu className="w-6 h-6 text-white" />
             </div>
             <span className="text-2xl font-bold text-gray-900">DevOps</span>
+            <span className="text-sm text-gray-500 hidden md:block">by Ayesha</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -39,8 +44,11 @@ const Navigation = () => {
             <Link to="/contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
               Contact
             </Link>
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white">
-              Get Started
+            <Button 
+              className="bg-blue-600 hover:bg-blue-700 text-white"
+              onClick={handleGetStarted}
+            >
+              View Portfolio
             </Button>
           </div>
 
@@ -75,8 +83,11 @@ const Navigation = () => {
               <Link to="/contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Contact
               </Link>
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white w-full">
-                Get Started
+              <Button 
+                className="bg-blue-600 hover:bg-blue-700 text-white w-full"
+                onClick={handleGetStarted}
+              >
+                View Portfolio
               </Button>
             </div>
           </div>
