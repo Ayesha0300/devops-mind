@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -16,6 +15,16 @@ const Blog = () => {
 
   const blogPosts = [
     {
+      title: "Building Intelligent Applications with OpenAI Agents SDK",
+      excerpt: "Discover how to leverage the new OpenAI Agents SDK to create autonomous AI agents that can perform complex tasks, make decisions, and interact with external systems in your applications. Learn about agent architectures, implementation patterns, and real-world use cases.",
+      author: "Ayesha Bashir",
+      date: "December 25, 2024",
+      readTime: "7 min read",
+      category: "AI & Automation",
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=300&fit=crop",
+      featured: true
+    },
+    {
       title: "The Future of DevOps: AI-Powered Automation",
       excerpt: "Explore how artificial intelligence is revolutionizing DevOps practices, from predictive scaling to intelligent incident response, and what it means for your organization's future.",
       author: "Ayesha Bashir",
@@ -23,7 +32,7 @@ const Blog = () => {
       readTime: "5 min read",
       category: "AI & Automation",
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=300&fit=crop",
-      featured: true
+      featured: false
     },
     {
       title: "Kubernetes Security Best Practices for 2025",
@@ -118,17 +127,17 @@ const Blog = () => {
   const regularPosts = filteredPosts.filter(post => !post.featured);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-teal-50">
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-teal-50 dark:from-gray-800 dark:to-gray-700">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto space-y-6">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900">
+            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white">
               DevOps Insights & Articles
             </h1>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
               Stay updated with the latest trends, best practices, and insights 
               from the world of DevOps, cloud technologies, and software engineering.
             </p>
@@ -137,17 +146,17 @@ const Blog = () => {
       </section>
 
       {/* Search & Filter */}
-      <section className="py-12 bg-white border-b">
+      <section className="py-12 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-6 items-center justify-between">
             <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500 w-5 h-5" />
               <Input
                 type="text"
                 placeholder="Search articles..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10"
+                className="pl-10 bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white"
               />
             </div>
             
@@ -158,7 +167,10 @@ const Blog = () => {
                   variant={selectedCategory === category ? "default" : "outline"}
                   size="sm"
                   onClick={() => setSelectedCategory(category)}
-                  className={selectedCategory === category ? "bg-blue-600" : ""}
+                  className={selectedCategory === category ? 
+                    "bg-blue-600 dark:bg-blue-700 text-white" : 
+                    "border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                  }
                 >
                   {category}
                 </Button>
@@ -170,10 +182,10 @@ const Blog = () => {
 
       {/* Featured Article */}
       {featuredPost && selectedCategory === 'All' && !searchTerm && (
-        <section className="py-16">
+        <section className="py-16 bg-white dark:bg-gray-900">
           <div className="container mx-auto px-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-8">Featured Article</h2>
-            <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Featured Article</h2>
+            <Card className="overflow-hidden hover:shadow-lg dark:hover:shadow-2xl transition-shadow duration-300 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
               <div className="grid lg:grid-cols-2 gap-0">
                 <div className="relative">
                   <img 
@@ -188,16 +200,16 @@ const Blog = () => {
                 
                 <div className="p-8 lg:p-12 space-y-6 flex flex-col justify-center">
                   <div>
-                    <Badge className="mb-4">{featuredPost.category}</Badge>
-                    <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+                    <Badge className="mb-4 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200">{featuredPost.category}</Badge>
+                    <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-4">
                       {featuredPost.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed mb-6">
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
                       {featuredPost.excerpt}
                     </p>
                   </div>
 
-                  <div className="flex items-center justify-between text-sm text-gray-500 pb-6 border-b">
+                  <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400 pb-6 border-b border-gray-200 dark:border-gray-700">
                     <div className="flex items-center space-x-4">
                       <div className="flex items-center">
                         <User className="w-4 h-4 mr-2" />
@@ -214,7 +226,7 @@ const Blog = () => {
                     </div>
                   </div>
 
-                  <Button className="bg-blue-600 hover:bg-blue-700 text-white group">
+                  <Button className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white group">
                     Read Full Article
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
@@ -226,15 +238,15 @@ const Blog = () => {
       )}
 
       {/* Blog Posts Grid */}
-      <section className="py-16">
+      <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-6">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
             {selectedCategory === 'All' ? 'Latest Articles' : `${selectedCategory} Articles`}
           </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {regularPosts.map((post, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
+              <Card key={index} className="overflow-hidden hover:shadow-lg dark:hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 group bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
                 <div className="relative">
                   <img 
                     src={post.image} 
@@ -242,21 +254,21 @@ const Blog = () => {
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-4 left-4">
-                    <Badge className="bg-white text-gray-900">{post.category}</Badge>
+                    <Badge className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-600">{post.category}</Badge>
                   </div>
                 </div>
                 
                 <div className="p-6 space-y-4">
                   <div className="space-y-3">
-                    <h3 className="text-xl font-semibold text-gray-900 leading-tight group-hover:text-blue-600 transition-colors">
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white leading-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       {post.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                       {post.excerpt}
                     </p>
                   </div>
 
-                  <div className="flex items-center justify-between text-sm text-gray-500 pt-4 border-t">
+                  <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400 pt-4 border-t border-gray-200 dark:border-gray-700">
                     <div className="flex items-center space-x-4">
                       <div className="flex items-center">
                         <User className="w-4 h-4 mr-1" />
@@ -267,12 +279,12 @@ const Blog = () => {
                         {post.readTime}
                       </div>
                     </div>
-                    <div className="text-gray-500">
+                    <div className="text-gray-500 dark:text-gray-400">
                       {post.date}
                     </div>
                   </div>
 
-                  <Button variant="ghost" className="text-blue-600 hover:text-blue-700 p-0 group">
+                  <Button variant="ghost" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 p-0 group">
                     Read More
                     <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
@@ -283,20 +295,20 @@ const Blog = () => {
 
           {filteredPosts.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-gray-500 text-lg">No articles found matching your search criteria.</p>
+              <p className="text-gray-500 dark:text-gray-400 text-lg">No articles found matching your search criteria.</p>
             </div>
           )}
         </div>
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl font-bold text-gray-900">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
               Stay Updated with DevOps Insights
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 dark:text-gray-300">
               Subscribe to our newsletter and get the latest DevOps articles, 
               tutorials, and best practices delivered to your inbox.
             </p>
@@ -304,9 +316,9 @@ const Blog = () => {
               <Input 
                 type="email" 
                 placeholder="Enter your email"
-                className="flex-1"
+                className="flex-1 bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white"
               />
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+              <Button className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white">
                 Subscribe
               </Button>
             </div>
