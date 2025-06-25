@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Clock, User, Search, ArrowRight, Calendar } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Blog = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -22,7 +23,8 @@ const Blog = () => {
       readTime: "7 min read",
       category: "AI & Automation",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=300&fit=crop",
-      featured: true
+      featured: true,
+      slug: "building-intelligent-applications-openai-agents-sdk"
     },
     {
       title: "The Future of DevOps: AI-Powered Automation",
@@ -32,7 +34,8 @@ const Blog = () => {
       readTime: "5 min read",
       category: "AI & Automation",
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=300&fit=crop",
-      featured: false
+      featured: false,
+      slug: "future-devops-ai-automation"
     },
     {
       title: "Kubernetes Security Best Practices for 2025",
@@ -42,7 +45,8 @@ const Blog = () => {
       readTime: "8 min read",
       category: "Security",
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=300&fit=crop",
-      featured: false
+      featured: false,
+      slug: "kubernetes-security-best-practices-2025"
     },
     {
       title: "Cloud Cost Optimization: A Complete Guide",
@@ -52,7 +56,8 @@ const Blog = () => {
       readTime: "6 min read",
       category: "Cloud",
       image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&h=300&fit=crop",
-      featured: false
+      featured: false,
+      slug: "cloud-cost-optimization-guide"
     },
     {
       title: "GitOps vs DevOps: Understanding the Evolution",
@@ -62,7 +67,8 @@ const Blog = () => {
       readTime: "7 min read",
       category: "DevOps",
       image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&h=300&fit=crop",
-      featured: false
+      featured: false,
+      slug: "gitops-vs-devops-evolution"
     },
     {
       title: "Implementing Zero-Trust Architecture in DevOps",
@@ -72,7 +78,8 @@ const Blog = () => {
       readTime: "9 min read",
       category: "Security",
       image: "https://images.unsplash.com/photo-1527576539890-dfa815648363?w=600&h=300&fit=crop",
-      featured: false
+      featured: false,
+      slug: "zero-trust-architecture-devops"
     },
     {
       title: "Infrastructure as Code: Terraform vs CloudFormation",
@@ -82,7 +89,8 @@ const Blog = () => {
       readTime: "10 min read",
       category: "Best Practices",
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=300&fit=crop",
-      featured: false
+      featured: false,
+      slug: "terraform-vs-cloudformation"
     },
     {
       title: "Monitoring and Observability in Microservices",
@@ -92,7 +100,8 @@ const Blog = () => {
       readTime: "8 min read",
       category: "Best Practices",
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=300&fit=crop",
-      featured: false
+      featured: false,
+      slug: "microservices-monitoring-observability"
     },
     {
       title: "CI/CD Pipeline Security: Protecting Your Supply Chain",
@@ -102,7 +111,8 @@ const Blog = () => {
       readTime: "6 min read",
       category: "Security",
       image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&h=300&fit=crop",
-      featured: false
+      featured: false,
+      slug: "cicd-pipeline-security"
     },
     {
       title: "Multi-Cloud Strategy: Benefits and Challenges",
@@ -112,7 +122,8 @@ const Blog = () => {
       readTime: "7 min read",
       category: "Cloud",
       image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&h=300&fit=crop",
-      featured: false
+      featured: false,
+      slug: "multi-cloud-strategy"
     }
   ];
 
@@ -226,10 +237,12 @@ const Blog = () => {
                     </div>
                   </div>
 
-                  <Button className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white group">
-                    Read Full Article
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
+                  <Link to={`/blog/${featuredPost.slug}`}>
+                    <Button className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white group">
+                      Read Full Article
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </Card>
@@ -284,10 +297,12 @@ const Blog = () => {
                     </div>
                   </div>
 
-                  <Button variant="ghost" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 p-0 group">
-                    Read More
-                    <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
+                  <Link to={`/blog/${post.slug}`}>
+                    <Button variant="ghost" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 p-0 group">
+                      Read More
+                      <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
                 </div>
               </Card>
             ))}

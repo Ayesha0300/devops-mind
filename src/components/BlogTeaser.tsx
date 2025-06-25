@@ -4,6 +4,7 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Clock, User } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const BlogTeaser = () => {
   const blogPosts = [
@@ -15,7 +16,8 @@ const BlogTeaser = () => {
       readTime: "7 min read",
       category: "AI & Automation",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop",
-      featured: true
+      featured: true,
+      slug: "building-intelligent-applications-openai-agents-sdk"
     },
     {
       title: "The Future of DevOps: AI-Powered Automation",
@@ -24,7 +26,8 @@ const BlogTeaser = () => {
       date: "Dec 20, 2024",
       readTime: "5 min read",
       category: "AI & Automation",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=250&fit=crop"
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=250&fit=crop",
+      slug: "future-devops-ai-automation"
     },
     {
       title: "Kubernetes Security Best Practices for 2025",
@@ -33,7 +36,8 @@ const BlogTeaser = () => {
       date: "Dec 18, 2024", 
       readTime: "8 min read",
       category: "Security",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=250&fit=crop"
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=250&fit=crop",
+      slug: "kubernetes-security-best-practices-2025"
     }
   ];
 
@@ -92,20 +96,24 @@ const BlogTeaser = () => {
                   </div>
                 </div>
 
-                <Button variant="ghost" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 p-0 group">
-                  Read More
-                  <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                <Link to={`/blog/${post.slug}`}>
+                  <Button variant="ghost" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 p-0 group">
+                    Read More
+                    <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
               </div>
             </Card>
           ))}
         </div>
 
         <div className="text-center">
-          <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white dark:bg-blue-700 dark:hover:bg-blue-600">
-            View All Articles
-            <ArrowRight className="ml-2 w-4 h-4" />
-          </Button>
+          <Link to="/blog">
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white dark:bg-blue-700 dark:hover:bg-blue-600">
+              View All Articles
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
