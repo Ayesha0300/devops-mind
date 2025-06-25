@@ -19,7 +19,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white overflow-hidden">
+    <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 dark:from-gray-900 dark:via-gray-800 dark:to-black text-white overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%221%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]" />
@@ -81,9 +81,9 @@ const Hero = () => {
           <div className="relative lg:pl-8">
             <div className="relative z-10">
               <img 
-                src="/lovable-uploads/ed77ed91-52fd-4555-a94e-e8c1ba77567c.png" 
+                src="/lovable-uploads/70bee705-0f7c-40ed-805f-b1c0c2eff93b.png" 
                 alt="AI-Driven DevOps Innovation by Ayesha Bashir" 
-                className="w-full max-w-lg mx-auto animate-scale-in"
+                className="w-full max-w-lg mx-auto animate-scale-in rounded-lg"
               />
             </div>
             
