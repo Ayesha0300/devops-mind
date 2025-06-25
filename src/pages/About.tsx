@@ -44,23 +44,23 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-teal-50">
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-teal-50 dark:from-gray-800 dark:to-gray-900 transition-colors duration-300">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto space-y-6">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900">
+            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white">
               About Ayesha Bashir
             </h1>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
               A passionate DevOps engineer, AI specialist, and full-stack developer dedicated to 
               transforming how organizations build, deploy, and manage their applications through 
               cutting-edge automation and intelligent solutions.
             </p>
             <div className="flex justify-center space-x-4 mt-8">
-              <Button asChild variant="outline">
+              <Button asChild variant="outline" className="border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">
                 <a 
                   href="https://www.linkedin.com/in/ayesha-bashir-60b83b2b1/" 
                   target="_blank" 
@@ -71,7 +71,7 @@ const About = () => {
                   <span>LinkedIn</span>
                 </a>
               </Button>
-              <Button asChild variant="outline">
+              <Button asChild variant="outline" className="border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">
                 <a 
                   href="https://github.com/Ayesha0300" 
                   target="_blank" 
@@ -82,7 +82,7 @@ const About = () => {
                   <span>GitHub</span>
                 </a>
               </Button>
-              <Button asChild>
+              <Button asChild className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white">
                 <a 
                   href="https://v0-modern-portfolio-website-delta-umber.vercel.app/" 
                   target="_blank" 
@@ -99,31 +99,31 @@ const About = () => {
       </section>
 
       {/* Mission & Values */}
-      <section className="py-20">
+      <section className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-3 gap-8 mb-16">
-            <Card className="p-8 text-center">
-              <Target className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-4">My Mission</h3>
-              <p className="text-gray-600 leading-relaxed">
+            <Card className="p-8 text-center bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
+              <Target className="w-12 h-12 text-blue-600 dark:text-blue-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">My Mission</h3>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                 To empower organizations with cutting-edge DevOps practices and AI-driven solutions 
                 that accelerate innovation, improve reliability, and drive business growth.
               </p>
             </Card>
             
-            <Card className="p-8 text-center">
-              <Lightbulb className="w-12 h-12 text-teal-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-4">My Vision</h3>
-              <p className="text-gray-600 leading-relaxed">
+            <Card className="p-8 text-center bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
+              <Lightbulb className="w-12 h-12 text-teal-600 dark:text-teal-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">My Vision</h3>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                 To bridge the gap between development, operations, and artificial intelligence 
                 through intelligent automation and innovative solutions.
               </p>
             </Card>
             
-            <Card className="p-8 text-center">
-              <Award className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-4">My Values</h3>
-              <p className="text-gray-600 leading-relaxed">
+            <Card className="p-8 text-center bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
+              <Award className="w-12 h-12 text-purple-600 dark:text-purple-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">My Values</h3>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                 Excellence, continuous learning, innovation, and creating impactful solutions 
                 that make a difference in the tech industry.
               </p>
@@ -133,13 +133,13 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Meet Our Team
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Our diverse team of experts brings together years of experience in DevOps, 
               cloud technologies, AI, and enterprise software development.
             </p>
@@ -147,18 +147,18 @@ const About = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
-              <Card key={index} className="p-6 text-center hover:shadow-lg transition-shadow">
+              <Card key={index} className="p-6 text-center hover:shadow-lg dark:hover:shadow-2xl transition-shadow bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700">
                 <img 
                   src={member.image} 
                   alt={member.name}
                   className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
                 />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
-                <p className="text-blue-600 font-medium mb-3">{member.role}</p>
-                <p className="text-gray-600 mb-4 leading-relaxed">{member.bio}</p>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{member.name}</h3>
+                <p className="text-blue-600 dark:text-blue-400 font-medium mb-3">{member.role}</p>
+                <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">{member.bio}</p>
                 <div className="flex flex-wrap gap-2 justify-center mb-4">
                   {member.skills.map((skill, skillIndex) => (
-                    <Badge key={skillIndex} variant="secondary">
+                    <Badge key={skillIndex} variant="secondary" className="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300">
                       {skill}
                     </Badge>
                   ))}
@@ -169,7 +169,7 @@ const About = () => {
                       href={member.linkedin} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-blue-600 transition-colors"
+                      className="text-gray-400 dark:text-gray-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                     >
                       <Linkedin className="w-5 h-5" />
                     </a>
@@ -177,7 +177,7 @@ const About = () => {
                       href={member.github} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-gray-900 transition-colors"
+                      className="text-gray-400 dark:text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors"
                     >
                       <Github className="w-5 h-5" />
                     </a>
@@ -185,7 +185,7 @@ const About = () => {
                       href={member.portfolio} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-teal-600 transition-colors"
+                      className="text-gray-400 dark:text-gray-500 hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
                     >
                       <ExternalLink className="w-5 h-5" />
                     </a>
@@ -198,13 +198,13 @@ const About = () => {
       </section>
 
       {/* Timeline */}
-      <section className="py-20">
+      <section className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               My Journey
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               A journey of continuous learning, innovation, and growth in the DevOps and AI space.
             </p>
           </div>
@@ -213,14 +213,14 @@ const About = () => {
             {milestones.map((milestone, index) => (
               <div key={index} className="flex items-center mb-8">
                 <div className="flex-shrink-0 w-24 text-right pr-8">
-                  <div className="text-2xl font-bold text-blue-600">{milestone.year}</div>
+                  <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{milestone.year}</div>
                 </div>
                 <div className="flex-shrink-0">
-                  <div className="w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg"></div>
+                  <div className="w-4 h-4 bg-blue-600 dark:bg-blue-400 rounded-full border-4 border-white dark:border-gray-900 shadow-lg"></div>
                 </div>
                 <div className="flex-grow pl-8">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{milestone.event}</h3>
-                  <p className="text-gray-600">{milestone.description}</p>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{milestone.event}</h3>
+                  <p className="text-gray-600 dark:text-gray-300">{milestone.description}</p>
                 </div>
               </div>
             ))}
